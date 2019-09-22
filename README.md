@@ -27,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 安装的依赖
+cnpm install node-sass --save-dev
+cnpm install sass-loader --save-dev
