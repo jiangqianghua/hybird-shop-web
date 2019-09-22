@@ -1,6 +1,6 @@
 <template>
   <div class="tool-bar">
-    <div class="tool-bar-item" v-for="(item, index) in toolBarData" :key="index">
+    <div class="tool-bar-item" @click="onChangeFragment(item, index)" v-for="(item, index) in toolBarData" :key="index">
       <img class="tool-bar-item-img" :src="[index === selectItemIndex ? item.hIcon : item.nIcon]" />
       <p class="tool-bar-item-name" :class="{'tool-bar-item-name-h': index === selectItemIndex}">{{item.name}}</p>
     </div>
@@ -45,6 +45,12 @@
         ],
         //  选中的tab index
         selectItemIndex: 0
+      }
+    },
+    methods: {
+      onChangeFragment: function (item, index) {
+        this.selectItemIndex = index
+        this.$emit('onChangeFragment', item.componentName)
       }
     }
   }

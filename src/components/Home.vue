@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p class="test">测试 fontSize 样式</p>
+    <p>home</p>
   </div>
 </template>
 
@@ -15,7 +15,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@css/style.scss';
-  .test {
-    font-size: px2rem(16);
+  .home{
+    width: 100%;
+    height: 100%;
+    font-size: px2rem(32);
   }
 </style>
