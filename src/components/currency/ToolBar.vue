@@ -8,52 +8,52 @@
 </template>
 
 <script>
-  export default {
-    data: function() {
-      return {
-        // tab 按钮数据源
-        toolBarData: [{
-            // 默认图片
-            nIcon: require('@img/home-n.svg'),
-            // 高亮图片
-            hIcon: require('@img/home-h.svg'),
-            // 名称
-            name: '首页',
-            // 跳转的组件名称
-            componentName: 'home'
-          },
-          {
-            // 默认图片
-            nIcon: require('@img/shopping-n.svg'),
-            // 高亮图片
-            hIcon: require('@img/shopping-h.svg'),
-            // 名称
-            name: '购物车',
-            // 跳转的组件名称
-            componentName: 'shopping'
-          },
-          {
-            // 默认图片
-            nIcon: require('@img/my-n.svg'),
-            // 高亮图片
-            hIcon: require('@img/my-h.svg'),
-            // 名称
-            name: '我的',
-            // 跳转的组件名称
-            componentName: 'my'
-          }
-        ],
-        //  选中的tab index
-        selectItemIndex: 0
+export default {
+  data: function () {
+    return {
+      // tab 按钮数据源
+      toolBarData: [{
+        // 默认图片
+        nIcon: require('@img/home-n.svg'),
+        // 高亮图片
+        hIcon: require('@img/home-h.svg'),
+        // 名称
+        name: '首页',
+        // 跳转的组件名称
+        componentName: 'home'
+      },
+      {
+        // 默认图片
+        nIcon: require('@img/shopping-n.svg'),
+        // 高亮图片
+        hIcon: require('@img/shopping-h.svg'),
+        // 名称
+        name: '购物车',
+        // 跳转的组件名称
+        componentName: 'shopping'
+      },
+      {
+        // 默认图片
+        nIcon: require('@img/my-n.svg'),
+        // 高亮图片
+        hIcon: require('@img/my-h.svg'),
+        // 名称
+        name: '我的',
+        // 跳转的组件名称
+        componentName: 'my'
       }
-    },
-    methods: {
-      onChangeFragment: function (item, index) {
-        this.selectItemIndex = index
-        this.$emit('onChangeFragment', item.componentName)
-      }
+      ],
+      //  选中的tab index
+      selectItemIndex: 0
+    }
+  },
+  methods: {
+    onChangeFragment: function (item, index) {
+      this.selectItemIndex = index
+      this.$emit('onChangeFragment', item.componentName)
     }
   }
+}
 </script>
 
 <style lang="scss">

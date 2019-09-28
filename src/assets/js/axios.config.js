@@ -1,13 +1,14 @@
-import vue from 'vue'
+import Vue from 'vue'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://192.168.1.102:8080/'
+axios.defaults.baseURL = 'http://127.0.0.1:8000/'
 
 /**
  * 设置拦截请求
  */
-axios.interceptor.response.use((response) => {
-	return response.data
+axios.interceptors.response.use((response) => {
+  console.log('http响应拦截')
+	return response.data.data
 }, (error) => {
 	// 处理错误请求
 	return Promise.reject(error)
